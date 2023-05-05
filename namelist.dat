@@ -1,0 +1,20 @@
+&init
+sigma		= 	2.,							!factor de deformação
+A0			= 	-10000.,							!valor maximo do campo inicial de psi
+alpha		=   1.5,							!Gauss-Siedel over-relaxation factor
+jactyp		=	1
+/
+&domains
+e_ns		=	40,
+e_we		= 	160,
+dx			=	125000.,
+dy			= 	125000.,
+dt			= 	1800.,
+nint		=   720,
+lat			=   45.,
+lon			=	320.
+/
+$io
+io_out		=	'out_barotrp_jkb1_160x40.nc',
+io_dt		=	6								!Sample of time for output netcdf file					
+/
